@@ -10,14 +10,14 @@ public class HiddenWord {
     String word;
     public HiddenWord() {
     }
-    public void generationWord() throws IOException {//так, брат, вот тут если четсно, я пока с try и catch не супер мега разобрался, хотя я представляю чё они должны как бы делать, но в этом случае мне компилтор сам подсказал, что в методе нужно прописать исключение
+    public void generationWord() throws IOException {
         try {
             List<String> directory = Files.readAllLines(Path.of("C:\\Users\\lohpe\\OneDrive\\Рабочий стол\\джава\\словарь.txt"));
         }
         catch (IOException e) {
             System.out.println("Ошибка! Файл не найден!");
         }
-        finally {//вот здесь пишется хуйня, которая выполнится в любом случае, как я понимаю
+        finally {// выполнится в любом случае
             List<String> directory = Files.readAllLines(Path.of("C:\\Users\\lohpe\\OneDrive\\Рабочий стол\\джава\\словарь.txt"));
             //вытаскиваем словарь из файла и записываем в коллекцию
             Random randomizer = new Random();
